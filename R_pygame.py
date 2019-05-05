@@ -13,10 +13,10 @@ GPIO.setup(21, GPIO.OUT)
 GPIO.output(21, 1)
 GPIO.setup(13, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(13, GPIO.RISING)
-GPIO.setup(26, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
-GPIO.add_event_detect(26, GPIO.RISING)
 GPIO.setup(19, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(19, GPIO.RISING)
+GPIO.setup(26, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.add_event_detect(26, GPIO.RISING)
 
 pygame.display.set_caption("Radiosteuerung")
 screen = pygame.display.set_mode((520, 300))
@@ -183,9 +183,11 @@ while running:
         if i >= 365 and i <= 405:
             station_selected = "mpc play 10"
         #alert_txt1 = font.render(station_selected, 1, (fontcolor))
+        
+        
     if GPIO.event_detected(26):
-        #alert_txt = "Pin 16"
-        i = 200
+        alert_txt = "Pin 26"
+        #i = i
         if i <= 10:
             i = 11
         if i >= 400:
@@ -210,7 +212,7 @@ while running:
             station_selected = "mpc play 9"
         if i >= 365 and i <= 405:
             station_selected = "mpc play 10"
-        #alert_txt1 = font.render(station_selected, 1, (fontcolor))
+        alert_txt1 = font.render(station_selected, 1, (fontcolor))
         
     
     
