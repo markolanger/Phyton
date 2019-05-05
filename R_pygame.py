@@ -9,11 +9,11 @@ import RPi.GPIO as GPIO
 ##import subprocess
 i = 230
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(13, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(21, GPIO.RISING)
-GPIO.setup(20, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(26, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(20, GPIO.RISING)
-GPIO.setup(16, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(19, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.add_event_detect(16, GPIO.RISING)
 
 pygame.display.set_caption("Radiosteuerung")
