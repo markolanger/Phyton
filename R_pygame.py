@@ -127,7 +127,7 @@ while running:
     #else:
         #alert_txt = subprocess.check_output(station_selected, shell=True)
     #Flag_station_select = station_selected
-    if GPIO.event_detected(21):
+    if GPIO.event_detected(13):
        # alert_txt = "Pin 21"
         i = i-10
         if i <= 10:
@@ -155,7 +155,7 @@ while running:
         if i >= 365 and i <= 405:
             station_selected = "mpc play 10"
         #alert_txt1 = font.render(station_selected, 1, (fontcolor))
-    if GPIO.event_detected(20):
+    if GPIO.event_detected(19):
         #alert_txt = "Pin 20"
         i = i+10
         if i <= 10:
@@ -183,7 +183,7 @@ while running:
         if i >= 365 and i <= 405:
             station_selected = "mpc play 10"
         #alert_txt1 = font.render(station_selected, 1, (fontcolor))
-    if GPIO.event_detected(16):
+    if GPIO.event_detected(26):
         #alert_txt = "Pin 16"
         i = 200
         if i <= 10:
